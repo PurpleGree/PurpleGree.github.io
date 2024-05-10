@@ -1,3 +1,3 @@
-const pageSection = document.getElementById("about")
+// const pageSection = document.getElementById("about")
 
-pageSection.
+// pageSection.

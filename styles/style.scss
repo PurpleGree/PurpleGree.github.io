@@ -167,7 +167,7 @@ main{
         display: none;
         color: lighten($default-color, $amount: 20);
         font-family: $section-header-font ;
-        font-size: map-get($map: $font-sizes, $key:default );
+        font-size: map-get($map: $font-sizes, $key:smaller );
         margin-bottom: 5px;
     }
 

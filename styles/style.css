@@ -113,7 +113,7 @@ main {
   display: none;
   color: rgba(216, 225, 237, 0.888);
   font-family: "Times New Roman", Times, serif;
-  font-size: 1rem;
+  font-size: 0.85rem;
   margin-bottom: 5px;
 }
 #rightSide .about-container {
