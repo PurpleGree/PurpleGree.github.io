@@ -8,7 +8,7 @@ $default_font:'Poppins', sans-serif;
 $nav-font-family: 'Times New Roman', Times, serif;
 $section-header-font: 'Times New Roman', Times, serif;
 $nav-default-color: rgba(128, 128, 128, 0.753);
-$font-sizes: ("xx-small": 0.5rem, "small" : 0.75rem , "default": 1rem , "medium": 1.25rem , "large": 1.5rem , "xx-large":2rem);
+$font-sizes: ("xx-small": 0.5rem, "small" : 0.75rem , "smaller": 0.85rem , "default": 1rem , "medium": 1.25rem , "large": 1.5rem , "xx-large":2rem);
 // $flex-basis: 35% ;
 $flex-basis: 45% ;
 // $body-bg: linear-gradient( rgba(11, 11, 19, 0.842) , black);
@@ -82,6 +82,7 @@ main{
         p{
             font-size: small;
             line-height: 2rem;
+            width: 65%;
         }
     
         hr{
@@ -145,7 +146,7 @@ main{
 
             }
 
-.rightSide{
+#rightSide{
     flex-basis: $flex-basis;
     padding-right: 3px;
     height: calc(100vh - 5rem - 2px);
@@ -177,6 +178,29 @@ main{
     .about-container{
         @include rightside-containers();
         padding: 3px;
+
+        #r-p1{
+            margin-bottom: 10px;
+            animation: slidein 2s ;
+            animation-delay: 0.15s ;
+            animation-fill-mode: forwards;
+            transform: translateY(100vh);
+        }
+
+        #r-p2{
+            @extend #r-p1;
+            animation-delay: 0.6s;
+        }
+        #r-p3{
+            @extend #r-p1;
+            animation-delay: 1s;
+        }
+        #r-p4{
+            @extend #r-p1;
+            animation-delay: 1.5s;
+        }
+
+       
        
     }
 
@@ -215,7 +239,7 @@ main{
 
 }
 
-.rightSide::-webkit-scrollbar{
+#rightSide::-webkit-scrollbar{
     width: 0px;
 }
 
@@ -243,7 +267,7 @@ main{
     }
     
 
-    .rightSide{
+    #rightSide{
         max-width: unset;
         height: auto;
 
@@ -252,4 +276,13 @@ main{
             display: block;
         }
     }
+
+}
+
+@keyframes slidein {
+    to{
+        transform: translateY(0px);
+    }
+
+    
 }
