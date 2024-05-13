@@ -9,10 +9,12 @@
   <meta name="author" content="Ikeoluwa Oladele" />
   <meta name="description" content="A website portfolio that show's Oladele's skills as a software developer" />
   <link rel="stylesheet" href="styles/style.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <script src="js/onclick_func.js" defer></script>
 </head>
 
 <body>
+  <div id="torchlight"></div>
   <main>
     <section class="leftSide">
       <section class="introduction">
@@ -31,18 +33,18 @@
         <ul class="nav-bar" id="navb">
           <li>
             <div class="nav-option"><a href="#about">About</a>
-              <div class="selected"></div>
+              <div class="hovered"></div>
             </div>
           </li>
           <li>
-            <div class="nav-option"><a href="#experience">Experience</a>
-              <div class="selected"></div>
+            <div class="nav-option"><a href="#resume-section">Resume</a>
+              <div class="hovered"></div>
             </div>
           </li>
           <li>
             <div class="nav-option">
               <a href="#projects">Projects</a>
-              <div class="selected"></div>
+              <div class="hovered"></div>
             </div>
           </li>
         </ul>
@@ -52,7 +54,7 @@
 
     <section id="rightSide">
       <section id="about">
-        <div class="about-container">
+        <div id="about-container">
           <h3 class="section-header">ABOUT</h3>
           <p id="r-p1"> My journey into this fascinating world began with a spark of inspiration from hacking movies, leading me to the discovery of the Scratch programming language in <time datetime="2019">2019</time>. The simplicity and power of drag-and-drop coding opened my eyes to the endless possibilities in software development.</p>
           <p id="r-p2">Driven by curiosity, I dove deeper and embraced the elegance of Python, guided by the wisdom of “Automate the Boring Stuff with Python.” My commitment to mastering the craft led me to the <em>Zuri Bootcamp</em> in 2021, where I got introduced to backend development using Python and the Django framework. Although an unexpected setback caused a pause in my learning path, my determination remained unshaken.</p>
@@ -64,47 +66,31 @@
       </section>
       <!-- <br> -->
 
-      <section id="experience">
-        <div class="experience-container">
-          <h3 class="section-header">Experience</h3>
-          <div class="experience-one">
-            <span> 2024 - present </span><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nulla facilis,
-              tempore et quasi qui eius,
-              eveniet quo asperiores architecto, doloribus eos vel! Laboriosam minima ex debitis et, iste voluptas!</p>
-          </div>
-          <div class="experience-one">
-            <span>2024 - present </span> <p>Impedit modi voluptatibus exercitationem animi? Temporibus libero hic aut modi
-              amet consequatur non optio
-              tenetur culpa officiis beatae doloribus commodi, eligendi distinctio quisquam odit explicabo. Beatae
-              deserunt
-              excepturi tempore corporis.</p>
-          </div>
-          <div class="experience-one">
-            <span>2024 - present </span><p>Hic temporibus explicabo quisquam ea officiis libero? Optio dolore est
-              laudantium voluptatum repellat.
-              Aspernatur laborum iure deserunt voluptate, aliquid, molestias laudantium nam animi maiores expedita dicta
-              dolorum esse sint nulla.</p>
-          </div>
-
-
-
-        </div>
+      <section id="resume-section">
+        <h3 class="section-header">Resume</h3>
+        <img src="img/resume4portfolio.jpg" type="img/jpg" alt="resume" id="resume">
+        <a href="/data/sw_tools_nokia.pdf" target="_blank" title="view Ikeoluwa Oladele resume" id="view-resume">View full resume <span class="material-symbols-outlined">
+          open_in_new
+          </span> </a>
       </section>
       <br>
+
+
       <section id="projects">
-        <div class="projects-container">
-          <h3 class="section-header">PROJECTS</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nulla facilis, tempore et quasi qui eius,
-            eveniet quo asperiores architecto, doloribus eos vel! Laboriosam minima ex debitis et, iste voluptas!</p>
-          <p>Impedit modi voluptatibus exercitationem animi? Temporibus libero hic aut modi amet consequatur non optio
-            tenetur culpa officiis beatae doloribus commodi, eligendi distinctio quisquam odit explicabo. Beatae
-            deserunt
-            excepturi tempore corporis.</p>
-          <p>Hic temporibus explicabo quisquam ea officiis libero? Optio dolore est laudantium voluptatum repellat.
-            Aspernatur laborum iure deserunt voluptate, aliquid, molestias laudantium nam animi maiores expedita dicta
-            dolorum esse sint nulla.</p>
+        <div class="project-container">
+          <a href="">Website portfolio </a>
+          <div class="img-container"><img src="img/current_portfolio_website.png" alt="img of portfolio website" class="projects-img" ></div>
         </div>
 
+        <div class="project-container">
+          <a href="https://github.com/PurpleGree/ipv4calculator">IPV Subnettor </a>
+          <div class="img-container"><img src="img/subnet-me1.png" alt="IPV subnettor Java Application user interface" class="projects-img"></div>
+
+        </div>
+        <div class="project-container"><a href="img/erd-diagram.png">Database ERD</a>
+          <div class="img-container"><img src="img/erd-diagram.png" alt="Erd diagram image " class="projects-img"></div>
+        </div>
+        
       </section>
     </section>
 
