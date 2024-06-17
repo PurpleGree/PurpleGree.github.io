@@ -27,8 +27,8 @@ $flex-basis: 45% ;
     pointer-events: none;
 
     border-radius: 50%;
-    width:35vw;
-    height: 70vh;
+    width:15vw;
+    height: 30vh;
 
     background:radial-gradient(circle , rgba(3, 3, 37, 0.742) 0%, rgba(41, 41, 59, 0.512)) ;
     transform: translate(-50%, -50%);
@@ -43,6 +43,7 @@ $flex-basis: 45% ;
 body{
     font-family: $default_font;
     background: $main-bg;
+    background-attachment: fixed;
     font-size: map-get($map: $font-sizes, $key:medium );
     line-height: 1.6;
     color: $default-color;
@@ -53,15 +54,12 @@ body{
 main{
     // background: $main-bg;
     min-height:calc(100vh - 5rem);
-    width: 80vw;
+    width: 85vw;
     margin: auto;
     display: flex;
     padding-top: 5rem;
-    gap:10%;
+    gap:7%;
     justify-content: space-between;
-
-
-    
 }
 
 .leftSide{
@@ -166,7 +164,7 @@ main{
 
 #rightSide{
     flex-basis: $flex-basis;
-    padding-right: 3px;
+    padding-inline: 1rem;
     height: calc(100vh - 5rem - 2px);
     display: flex;
     flex-direction: column;
@@ -180,7 +178,9 @@ main{
        align-content: center;
        flex-shrink: 0;
     //    background-color: darken;
-    }
+    }   
+
+        
     .section-header{
         display: none;
         color: lighten($default-color, $amount: 20);
@@ -256,7 +256,7 @@ main{
         height: calc(100% /$numOfprojects - 21px);
         display: flex;
         gap: 5%;
-        margin-bottom: 7px;
+        margin-bottom: 1.75rem;
         align-items: flex-start;
 
 
@@ -291,37 +291,62 @@ main{
     width: 0px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 740px) {
 
 
     main{
         flex-direction: column;
         gap: 2rem;
-        width: 70vw;
+        width: 90vw;
+        height: 100vh;
     }
 
     .nav-bar{
-        display: none;
-        // gap: 10px;
-        // justify-content: space-evenly;
-        // margin-bottom: 20px;
+        display: flex;
+        position: sticky;
+        flex-direction: row;
+        top: 0vh;
+        right: 0vh;
+        // flex-direction: row;
+        gap: 10px;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
         // position: sticky;
         // top: -20px;
+        z-index: 1;
         
     }
 
     .leftSide{
         gap: 2rem;
+        position: sticky;
+        top: 0;
+        // fl
     }
     
 
     #rightSide{
         max-width: unset;
-        height: auto;
+        gap: 2rem;
+        // flex-basis: 45%;
 
 
         .section-header{
             display: block;
+            margin-bottom: 25px;
+        }
+
+        section{
+            align-content: center;
+        }
+
+        #about-container  {
+
+            #r-p1{
+                // animation:none;
+                // transform: translateY(0px);
+            }
+           
         }
     }
 
